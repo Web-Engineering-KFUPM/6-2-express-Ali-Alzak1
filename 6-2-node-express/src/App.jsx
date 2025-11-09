@@ -140,7 +140,8 @@ function App() {
   const fetchQuote = async () => {
     const res = await fetch("http://localhost:3000/api/quote");
     const data = await res.json();
-    setQuote(data.quote);
+    setQuote(data.getRandomQuote);
+    console.log(data);
   };
 
   return (
